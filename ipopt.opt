@@ -1,0 +1,3 @@
+output_file /home/zhang/PythonWork/Homotopy/ipopt.log
+linear_solver ma57
+print_level 5

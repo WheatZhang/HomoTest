@@ -54,8 +54,13 @@ def obj(m):
 wocstr.objective = Objective(rule=obj, sense=maximize)
 
 #
-solver = SolverFactory("ipopt", executable=r"/home/zhang/IpoptWork/Ipopt-stable-3.14/build/bin/ipopt") #
+# solver = SolverFactory("ipopt", executable=r"/home/zhang/IpoptWork/Ipopt-stable-3.14/build/src/Apps/AmplSolver/ipopt") #
+solver = SolverFactory("ipopt", executable=r"/usr/local/bin/ipopt_original") #
 solver.options["tol"]=1e-8
 solver.options["output_file"]=r"/home/zhang/PythonWork/Homotopy/ipopt.log"
+
+import os
+new_lib = '/usr/local/lib'
+os.environ['LD_LIBRARY_PATH']=new_lib
 
 solver.solve(wocstr, tee=True)

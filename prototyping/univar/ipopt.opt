@@ -1,4 +1,4 @@
-output_file /home/zhang/PythonWork/Homotopy/prototyping/ipopt.log
+output_file /home/zhang/PythonWork/Homotopy/prototyping/univar/ipopt.log
 linear_solver ma57
 print_level 5
 hessian_approximation exact #limited-memory  exact
